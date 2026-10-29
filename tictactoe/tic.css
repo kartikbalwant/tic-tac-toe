@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #88a5c0;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Heading */
+.top {
+    height: 50px;
+    color: #060606;
+    background-color: #173e2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #0b0b0b;
+    font-weight: 500;
+}
+
+/* Main container */
+.container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tic Tac Toe board */
+.boxes {
+    width: min(90vw, 400px);
+    aspect-ratio: 1 / 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 1.5vmin;
+}
+
+/* Individual boxes */
+.box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 8px;
+    border: none;
+
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+
+    color: #173e2c;
+    font-size: clamp(30px, 10vw, 55px);
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* Reset button */
+.Reset {
+    height: 40px;
+    width: 90px;
+
+    border-radius: 5px;
+    border: none;
+
+    color: #88a5c0;
+    background-color: #173e2c;
+
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+
+    .top {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .container {
+        min-height: 65vh;
+        padding: 15px;
+    }
+
+    .boxes {
+        width: 90vw;
+        gap: 2vw;
+    }
+
+    .box {
+        font-size: 12vw;
+    }
+}
